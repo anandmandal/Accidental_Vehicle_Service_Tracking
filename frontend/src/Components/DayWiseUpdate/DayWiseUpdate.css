@@ -1,0 +1,92 @@
+.message{
+    background-color:#7089acb4;
+    color:#202A44;
+    border-radius: 0px 20px 20px 20px;
+
+    
+}
+.message .form{
+    display: flex;
+    justify-content: space-between;
+
+}
+.message .form .input-group{
+    display: flex;
+    
+}
+.message .form .input{
+    background-color: aliceblue;
+}
+.message .form .input-text{
+    width: 270px;
+    height:80px;
+    border-radius: 20px;
+    padding:10px;
+    background-color: aliceblue;
+}
+.addwork-btn{
+    display: inline-block;
+    padding:5px 10px;
+    color:#fff;
+    background-color: #1B365D;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100px;
+    margin-left: 20px;
+}
+.addwork-btn:hover{
+    background-color: #33b249;
+    transition: all 0.5s;
+}
+
+.previous-updates{
+    margin: 50px 0;
+}
+.previous-updates hr{
+    margin-bottom: 20px;
+}
+.previous-updates .form{
+    
+}
+.form-group{
+    display: flex;
+    background-color: #4681f4ac;
+    border-radius: 0px 20px 20px 20px;
+    width: 100%;
+    height:70px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    padding: 5px;
+}
+.form-group h5{
+    font-size: 24px;
+}
+.form-group input{
+    display: inline;
+    padding: 10px;
+    width:auto;
+    height:20px;
+    background-color: transparent;
+    border: none;
+
+
+}
+.form-group .addwork-btn{
+    display: inline-block;
+    padding:5px 7px;
+    color:#fff;
+    background-color: #1B365D;
+    border:none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 80px;
+   
+}
+
+
+
+

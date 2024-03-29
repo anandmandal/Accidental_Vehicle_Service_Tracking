@@ -1,0 +1,75 @@
+.main-container{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.head-section{
+    display: flex;
+    color: #202A44;
+    align-items: center;
+    /* float: inline-start; */
+}
+.vehcle-form{
+    margin: 20px auto;
+    padding:20px;
+    
+}
+.form{
+    color: #202A44;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-width: 900px;
+}
+.form-outer-box{
+    margin-top: 20px;
+    margin-left: 0px;
+    
+}
+
+.form-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #202A44;
+    padding: 20px;
+    border-radius: 0px 20px 20px 20px;
+    width: 100%;
+    
+}
+.input-group{
+    gap:5px;
+    
+
+}
+.form .form-outer-box .input-group input{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.933);
+   border-radius: 10px;
+    padding: 5px;
+    width: 270px;
+}
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #244a7e;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background: #1B365D;
+  }
+  .breaker{
+    width: 100%;
+   
+  }
+
+
+  .submit-btn:active{
+    box-shadow: -17px 17px 23px -7px #202A44;
+
+  }
