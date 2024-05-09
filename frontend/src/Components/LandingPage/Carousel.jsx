@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 import { IoIosArrowDropleft,IoIosArrowDropright } from "react-icons/io";
 import { GoDot, GoDotFill } from "react-icons/go";
@@ -14,7 +14,7 @@ const slideStyles = {
     borderRadius: '10px',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    transition: 'all 0.5s',
+    transition: 'ease-in',
     
 };
 
@@ -64,44 +64,50 @@ const dotStyle = {
 }
 
 
-export const Carousel = () => {
+const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+  
     const goToPrevious = () => {
-        const isFirstSlide = currentIndex === 0;
-        const newIndex = isFirstSlide ? volvoTrucks.length - 1 : currentIndex - 1;
-        setCurrentIndex(newIndex);
-    }
+      const newIndex = (currentIndex + volvoTrucks.length - 1) % volvoTrucks.length;
+      setCurrentIndex(newIndex);
+    };
+  
     const goToNext = () => {
-        const isLastSlide = currentIndex === volvoTrucks.length-1;
-        const newIndex = isLastSlide ? 0 : currentIndex + 1;
-        setCurrentIndex(newIndex);
-    }
-// it is for dot traversal
+      const newIndex = (currentIndex + 1) % volvoTrucks.length;
+      setCurrentIndex(newIndex);
+    };
+  
     const goToSlide = (slideIndex) => {
-        setCurrentIndex(slideIndex);
-    }
-
+      setCurrentIndex(slideIndex);
+    };
+  
+    useEffect(() => {
+      const intervalId = setInterval(goToNext, 3000); // Change slide every 3 seconds
+      return () => clearInterval(intervalId); // Cleanup function
+    }, [currentIndex]);
+  
     const slideStyleWidthBackground = {
-        ...slideStyles,
-        backgroundImage: `url(${volvoTrucks[currentIndex]})`
-    }
-  return (
+      backgroundImage: `url(${volvoTrucks[currentIndex]})`,
+    };
+  
+    return (
       <div style={sliderStyles}>
-          <div>
-              <div onClick={goToPrevious}><IoIosArrowDropleft  style={leftArrowStyles}/></div>
-              <div onClick={goToNext} ><IoIosArrowDropright style={rightArrowStyles}/></div>
-         </div>
-         <div style={slideStyleWidthBackground}></div>
-          <div style={dotsContainerStyles}>
-              {
-                  volvoTrucks.map((slide, slideIndex) => (
-                      <div onClick={()=>goToSlide(slideIndex)} key={slideIndex} style={dotStyle}>
-                        <GoDot/>
-                      </div>
-                  ))
-              }
-         </div>
+        <div onClick={goToPrevious}>
+          <IoIosArrowDropleft style={leftArrowStyles} />
+        </div>
+        <div onClick={goToNext}>
+          <IoIosArrowDropright style={rightArrowStyles} />
+        </div>
+        <div style={{ ...slideStyles, ...slideStyleWidthBackground }}></div>
+        <div style={dotsContainerStyles}>
+          {volvoTrucks.map((slide, slideIndex) => (
+            <div onClick={() => goToSlide(slideIndex)} key={slideIndex} style={dotStyle}>
+              {currentIndex === slideIndex ? <GoDotFill /> : <GoDot />}
+            </div>
+          ))}
+        </div>
       </div>
-  )
-}
+    );
+  };
+  
+  export default Carousel;

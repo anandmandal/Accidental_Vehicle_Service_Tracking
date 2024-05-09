@@ -60,7 +60,5 @@ form .input-group .submit-btn{
    cursor: pointer;
 }
 .right-next-btn{
-    position: absolute;
-    right:0;
-    bottom:200px
+    position: static;
 }

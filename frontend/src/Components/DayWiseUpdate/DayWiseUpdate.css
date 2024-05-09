@@ -24,23 +24,41 @@
     padding:10px;
     background-color: aliceblue;
 }
-.addwork-btn{
+.work-btn{
     display: inline-block;
-    padding:5px 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 15px;
+    max-height: 30px;
+    text-align: center;
+    font-size: 16px;    
+}
+.edit {
     color:#fff;
     background-color: #1B365D;
     border:none;
-    border-radius: 10px;
+    border-radius: 15px 0px 0px 15px;
     cursor: pointer;
-    font-size: 20px;
-    width: 100px;
+    font-size: 16px;
     margin-left: 20px;
 }
-.addwork-btn:hover{
-    background-color: #33b249;
+.edit:hover{
+    background-color: #0e213c;
     transition: all 0.5s;
 }
+.delete{
 
+    color:#fff;
+    background-color: #da3b1f;
+    border:none;
+    border-radius: 0px 15px 15px 0px;
+    cursor: pointer;
+}
+.delete:hover{
+    background-color: #f10b0b;
+    transition: all 0.5s;
+}
 .previous-updates{
     margin: 50px 0;
 }
@@ -60,6 +78,7 @@
     align-items: center;
     font-size: 20px;
     padding: 5px;
+    margin-bottom: 20px;
 }
 .form-group h5{
     font-size: 24px;
@@ -74,17 +93,21 @@
 
 
 }
-.form-group .addwork-btn{
+.addwork-btn{
     display: inline-block;
-    padding:5px 7px;
+    padding:5px 15px;
     color:#fff;
     background-color: #1B365D;
     border:none;
-    border-radius: 15px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     width: 80px;
    
+}
+.addwork-btn:hover{
+    background-color: #33b249;
+    transition: all 0.5s;
 }
 
 

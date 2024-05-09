@@ -1,0 +1,123 @@
+.share{
+    position:absolute;
+    right:5px;
+    padding-top:10px
+}
+.header{
+    margin-top: 50px;
+    color:#202A44;
+    background: #CED9E5;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 800px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.vehicles-Details {
+    display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.key-values{
+padding: 5px;
+
+margin: 20px 100px;
+
+}
+.accordian-summary{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+background-color: #005A9C;
+padding: 10px;
+color:#fff;
+border-radius: 5px;
+box-sizing: border-box;
+max-width: 800px;
+}
+.accordian-summary button{
+    font-size: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+ 
+}
+.share-btn{
+    border: none;
+    font-size: 20px;
+    background: #005A9C;
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    color: #fff;
+    transition: all 0.5;
+}
+.share-btn:hover{
+    box-shadow: rgba(236, 78, 78, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    background: #034b7f;
+
+}
+.accordian-div{
+margin-top: 20px;
+}
+fieldset{
+    margin-top: 10px;
+    padding: 5px;
+    max-width: 780px;
+}
+legend{
+    margin-bottom: 5px;
+}
+.work-details{
+    margin-top: 20px;
+}
+.day-one{
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    box-sizing: border-box;
+}
+.verticle{
+    border-left: 2px solid black;
+    height:60px;
+    transition: all ease-in;
+}
+.circle{
+    border: 1px solid;
+    border-radius: 50%;
+    text-align: center;
+   margin-left: -10px;
+  margin-right: 20px;
+    width:20px;
+    height:20px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+.message1{
+    display: flex;
+    align-items: center;
+}
+.date-details{
+
+    flex-wrap: wrap;
+    width: 300px;
+    min-height: 50px;
+    background: #191970;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.date-details p{
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.date-details h5{
+    padding: 4px;
+}

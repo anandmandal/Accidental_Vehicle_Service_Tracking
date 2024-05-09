@@ -14,6 +14,7 @@
     background-color: #1B365D;
     color:#ffffff;
     cursor: pointer;
+    
 }
 .link-add{
     display: flex;
@@ -24,7 +25,7 @@
     align-items: center;
     background-color: #1B365D;
     color:#ffffff;
-    margin-top: 20px;
+    margin-top: 70px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
@@ -79,14 +80,14 @@
 
 /* table style */
 
-tbody tr{
+.tbody {
    text-align: center;
    padding: 5px;
 }
-tbody tr td{
+.tbody td{
     padding: 5px;
 }
-tbody tr .btn{
+.tbody .btn{
     width:45px;
     height:30px;
     border: none;
@@ -95,14 +96,21 @@ tbody tr .btn{
     font-size: 18px;
     padding: 5px;
 }
-tbody tr .btn:hover{
+.tbody .btn:hover{
     background-color: #1f3553;
     color:#c9daf1;
 }
-tbody tr .edit{
+.tbody .edit{
     background-color: #5783db;
 }
-tbody tr .update{
+.tbody .update{
     background-color: #55c2da;
 }
+.tbody .delete{
+    background-color: #E34234;
+}
 
+#delete:hover{
+    background-color: #e71717;
+    color:#c9daf1;
+}

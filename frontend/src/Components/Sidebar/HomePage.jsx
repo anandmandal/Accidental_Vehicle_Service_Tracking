@@ -20,9 +20,9 @@ export const HomePage = ({ children }) => {
         setOpen(!open);
     }
     return (
-        <div className='container' >
+        <div className='container'  >
            
-            <div className='sidebar' style={{width:open?'300px':'50px'}}>
+            <div className='sidebar'  style={{width:open?'250px':'50px' }}>
             <div className='top-section'>
                 <h1 style={{display:open?"block":'none',marginLeft:open?'45px':'0px'}}>VOLVO</h1>
                 <div className='open-close-btn' style={{marginLeft:open?'50px':'0px'}}>
@@ -41,8 +41,8 @@ export const HomePage = ({ children }) => {
           
            
             </div>
-            <main>
-                <div className='navbar'></div>
+            <main style={{marginLeft:open?'250px':'50px' }}>
+                <div className='navbar' ></div>
                 <div className='child'>{children}</div>
                 
             </main>
