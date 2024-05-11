@@ -25,7 +25,7 @@
     align-items: center;
     background-color: #1B365D;
     color:#ffffff;
-    margin-top: 70px;
+    margin-top: 50px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
@@ -38,22 +38,22 @@
     border-radius: 20px;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
 }
-.form{
+.form-search{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
-.form .input-group{
+.form-search .input-group{
     display: flex;
     flex-direction: column;
 }
-.form .input-group label{
+.form-search .input-group label{
     font-size: 16px;
     margin-bottom: 2px;
 }
-.form .input-group .input{
+.form-search .input-group .input{
     border: none;
     background-color: rgba(224, 227, 229, 0.542);
    border-radius: 10px;
@@ -61,20 +61,16 @@
     padding: 2px 10px;
     width:220px
 }
-.form .input-group .submit-btn{
+.form-search .input-group .submit-btn{
     border: none;
    padding: 10px;
-   margin: 20px;
-    width: 60px;
-    height: 40px;
-   margin-inline-end: -20px;
    background-color: #1B365D;
    color:#c9daf1 ;
-   font-weight: bold;
+ 
    border-radius: 20px;
-   font-size: 20px;
+   font-size: 18px;
 }
-.form .input-group .submit-btn:hover{
+.form-search .input-group .submit-btn:hover{
     background-color: #26497a;
 }
 

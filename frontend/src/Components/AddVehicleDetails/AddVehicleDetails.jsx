@@ -256,7 +256,7 @@ export const AddVehicleDetails = () => {
            </div>
            
               <div className='input-group'>
-                  <button type='submit' className='submit-btn' style={{width:'250px'}}>Submit Details</button>
+                  <button type='submit' className='submit-btn' style={{width:'250px',fontSize:'16px',textAlign:'center',padding:"5px"}}>Submit Details</button>
               </div>
 
         </form>

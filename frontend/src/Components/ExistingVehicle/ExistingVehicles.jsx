@@ -104,7 +104,7 @@ export const ExistingVehicles = () => {
         </NavLink>
       </div>
       <div className="search-container">
-        <form onSubmit={handleSearchSubmit} className="form">
+        <form onSubmit={handleSearchSubmit} className="form-search">
           <div className="input-group">
             <label htmlFor="vehicleRegsNo">Enter Registration Number</label>
             <input className="input" name="vehicleRegsNo" onChange={handleSearchChange} value={searchKey.vehicleRegsNo} type="text" />

@@ -35,7 +35,7 @@ const rightArrowStyles = {
 const leftArrowStyles = {
     position: 'absolute',
     top: '50%',
-    transform: 'translate(0,-50%)',
+    transform: 'translate(-50%,0)',
     left: '32px',
     color: '#fff',
     zIndex: 1,

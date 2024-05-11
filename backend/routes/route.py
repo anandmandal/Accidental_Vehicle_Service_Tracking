@@ -4,7 +4,6 @@ from models.model import VehicleModel,PrimaryQuotation,InsuranceSurveyor,Custome
 from schema.schemas import list_serial_vehicle
 from config.database import collection_name
 from typing import Dict
-from models.fileModel import FileModel
 from operator import itemgetter
 from datetime import datetime
 

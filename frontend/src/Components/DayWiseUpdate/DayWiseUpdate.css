@@ -7,13 +7,13 @@
 }
 .message .form{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
 
 }
-.message .form .input-group{
-    display: flex;
-    
-}
+
 .message .form .input{
     background-color: aliceblue;
 }
@@ -25,13 +25,9 @@
     background-color: aliceblue;
 }
 .work-btn{
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px 15px;
+  padding:10px 20px;
+  padding-bottom: 30px;
     max-height: 30px;
-    text-align: center;
     font-size: 16px;    
 }
 .edit {
@@ -42,6 +38,7 @@
     cursor: pointer;
     font-size: 16px;
     margin-left: 20px;
+    
 }
 .edit:hover{
     background-color: #0e213c;
@@ -65,9 +62,7 @@
 .previous-updates hr{
     margin-bottom: 20px;
 }
-.previous-updates .form{
-    
-}
+
 .form-group{
     display: flex;
     background-color: #4681f4ac;
@@ -99,10 +94,11 @@
     color:#fff;
     background-color: #1B365D;
     border:none;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 18px;
     width: 80px;
+    margin-right: 20px;
    
 }
 .addwork-btn:hover{
