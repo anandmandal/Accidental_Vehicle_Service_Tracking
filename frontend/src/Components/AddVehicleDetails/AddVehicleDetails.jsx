@@ -109,7 +109,7 @@ export const AddVehicleDetails = () => {
       const response = await api.put(`/vehicles/${id}/update`,vehicles);
       if (response.data.message) {
         alert(response.data.message);
-        navigate(`/daywiseupdate/${id}`)
+        navigate(`/existingvehicles`)
       } else {
         alert('vehicle not found');
       }

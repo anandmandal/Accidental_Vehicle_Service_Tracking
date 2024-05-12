@@ -130,7 +130,7 @@ export const AddNewVehicles = () => {
               </div>
 
             <div className='input-group'>
-                <label htmlFor='hrs'>HRS</label>
+                <label htmlFor='hrs'>Engine Hrs</label>
                 <input type='text' name='hrs' onChange={handleFormValue} value={formData.hrs}  className='input'/>
               </div>
               <div className='input-group'>

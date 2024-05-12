@@ -62,36 +62,36 @@ async def add_vehicle(vehicle: VehicleModel):
 
 
 # POST/ ADD NEW VEHICLE with file
-@router.post("/vehicles/")
-async def add_vehicle(vehicle: VehicleModel, 
-                      primary_quotation_file: UploadFile = File(None), 
-                      insurance_surveyor_file: UploadFile = File(None),
-                      dismantling_work_end_file: UploadFile = File(None),
-                      parts_ordering_file: UploadFile = File(None)):
-    try:
-        # Convert the vehicle model to a dictionary
-        vehicle_dict = vehicle.dict()
+# @router.post("/vehicles/")
+# async def add_vehicle(vehicle: VehicleModel, 
+#                       primary_quotation_file: UploadFile = File(None), 
+#                       insurance_surveyor_file: UploadFile = File(None),
+#                       dismantling_work_end_file: UploadFile = File(None),
+#                       parts_ordering_file: UploadFile = File(None)):
+#     try:
+#         # Convert the vehicle model to a dictionary
+#         vehicle_dict = vehicle.dict()
 
-        # Attach file data to corresponding model fields
-        if primary_quotation_file:
-            vehicle_dict["Primary_Quotation_Submitted_to_Surveyor"]["upload_File"] = primary_quotation_file.filename  if primary_quotation_file else None
-        if insurance_surveyor_file:
-            vehicle_dict["Insurance_Surveyor_Visiting_to_Workshop"]["upload_File"] = insurance_surveyor_file.filename  if insurance_surveyor_file else None
-        if dismantling_work_end_file:
-            vehicle_dict["Dismantling_Work_Completed"]["upload_File"] = dismantling_work_end_file.filename if dismantling_work_end_file else None
-        if parts_ordering_file:
-            vehicle_dict["Parts_Ordering_Date"]["upload_File"] = parts_ordering_file.filename  if parts_ordering_file else None
+#         # Attach file data to corresponding model fields
+#         if primary_quotation_file:
+#             vehicle_dict["Primary_Quotation_Submitted_to_Surveyor"]["upload_File"] = primary_quotation_file.filename  if primary_quotation_file else None
+#         if insurance_surveyor_file:
+#             vehicle_dict["Insurance_Surveyor_Visiting_to_Workshop"]["upload_File"] = insurance_surveyor_file.filename  if insurance_surveyor_file else None
+#         if dismantling_work_end_file:
+#             vehicle_dict["Dismantling_Work_Completed"]["upload_File"] = dismantling_work_end_file.filename if dismantling_work_end_file else None
+#         if parts_ordering_file:
+#             vehicle_dict["Parts_Ordering_Date"]["upload_File"] = parts_ordering_file.filename  if parts_ordering_file else None
 
-        # NOW INSERT THE ALL DATA IN DB
-        result = collection_name.insert_one(vehicle_dict)
+#         # NOW INSERT THE ALL DATA IN DB
+#         result = collection_name.insert_one(vehicle_dict)
 
-        # Check if insertion was successful
-        if result.inserted_id:
-            return {"message": "Vehicle added successfully", "vehicle_id": str(result.inserted_id)}
-        else:
-            raise HTTPException(status_code=500, detail="Failed to add vehicle")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+#         # Check if insertion was successful
+#         if result.inserted_id:
+#             return {"message": "Vehicle added successfully", "vehicle_id": str(result.inserted_id)}
+#         else:
+#             raise HTTPException(status_code=500, detail="Failed to add vehicle")
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))
 
 
 
